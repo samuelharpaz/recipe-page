@@ -76,6 +76,8 @@ Medium:
 
   --spacer: 4rem;
   --spacer-section: 3.2rem;
+
+  --section-border-bottom: 1px solid var(--color-stone-150);
 }
 
 body {
@@ -86,16 +88,65 @@ body {
   line-height: var(--lh-body);
 }
 
-.header {
-  margin-bottom: var(--spacer-section);
-}
-
 .recipe {
   margin: 12.8rem auto;
   padding: var(--spacer);
   width: 73.6rem;
   background-color: var(--color-white);
   border-radius: var(--br-lg);
+}
+
+/* GENERAL */
+
+h2 {
+  color: var(--color-brown-800);
+  font-size: 2.8rem;
+  line-height: 1;
+  font-family: var(--ff-headings);
+  margin-bottom: 2.4rem;
+}
+
+.list {
+  list-style: none;
+}
+
+.item {
+  padding-left: 0.8rem;
+  display: flex;
+  align-items: center;
+}
+
+.item:not(:last-child) {
+  margin-bottom: 0.8rem;
+}
+
+.item-bullet-box,
+.item-number-box {
+  width: 1.6rem;
+  height: 2.4rem;
+  margin-right: 1.6rem;
+  display: flex;
+}
+
+.item-bullet-box {
+  align-items: center;
+}
+
+.item-number-box {
+  align-items: start;
+}
+
+.item-bullet {
+  width: 0.4rem;
+  height: 0.4rem;
+  background-color: var(--color-rose-800);
+  border-radius: 50%;
+}
+
+/* HEADER */
+
+.header {
+  margin-bottom: var(--spacer-section);
 }
 
 .recipe-img {
@@ -114,13 +165,16 @@ body {
 .recipe-description {
 }
 
+/* SECTION PREP */
+
 .section-prep {
   padding: 2.4rem;
   background-color: var(--color-rose-50);
   border-radius: var(--br-md);
+  margin-bottom: var(--spacer-section);
 }
 
-.section-prep h2 {
+.section-prep h3 {
   font-size: 2rem;
   font-weight: var(--fw-semibold);
   margin-bottom: 1.6rem;
@@ -128,31 +182,65 @@ body {
   color: var(--color-rose-800);
 }
 
-.list {
+/* SECTION INGREDIENTS */
+
+.section-ingredients {
+  padding-bottom: 2.4rem;
+  border-bottom: var(--section-border-bottom);
+  margin-bottom: 2.4rem;
+}
+
+/* SECTION INSTRUCTIONS */
+
+.section-instructions {
+  padding-bottom: 2.4rem;
+  border-bottom: var(--section-border-bottom);
+  margin-bottom: 2.4rem;
+}
+
+.recipe-instructions {
   list-style: none;
 }
 
-.item {
-  padding-left: 0.8rem;
+.recipe-instruction {
+  align-items: start;
+}
+
+.item-number {
+  color: var(--color-brown-800);
+  font-weight: var(--fw-bold);
+}
+
+/* SECTION NUTRITION */
+
+.section-nutrition {
+}
+
+.nutrition-list-description {
+  margin-bottom: 2.4rem;
+}
+
+.nutrition-list {
+  list-style: none;
+}
+
+.nutrition-item {
+  padding: 0 3.2rem;
   display: flex;
-  align-items: center;
 }
 
-.item:not(:last-child) {
-  margin-bottom: 0.8rem;
+.nutrition-item:not(:last-child) {
+  padding-bottom: 1.2rem;
+  border-bottom: 1px solid var(--color-stone-150);
+  margin-bottom: 1.2rem;
 }
 
-.item-bullet-box {
-  width: 1.6rem;
-  height: 2.4rem;
-  margin-right: 1.6rem;
-  display: flex;
-  align-items: center;
+.nutrition-element {
+  flex: 1;
 }
 
-.item-bullet {
-  width: 0.4rem;
-  height: 0.4rem;
-  background-color: var(--color-rose-800);
-  border-radius: 50%;
+.nutrition-value {
+  flex: 1;
+  font-weight: var(--fw-bold);
+  color: var(--color-brown-800);
 }
