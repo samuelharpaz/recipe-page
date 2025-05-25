@@ -2,20 +2,16 @@
 --- 01 TYPOGRAPHY SYSTEM
 
 - Font sizes (px)
-10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+ 16 / 20 / 28 / 40
 
 - Font weights
 Default: 400
-Medium: 500
 Semi-bold: 600
 Bold: 700
 
 - Line heights
-Default: 1
-Small: 1.05
-Medium: 1.2
-Paragraph default: 1.6
-Large: 1.8
+Body: 1.5
+Heading: 1
 
 - Letter spacing
 
@@ -52,8 +48,111 @@ Medium:
 --- 07 WHITESPACE
 
 - Spacing system (px)
-2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+ 8 / 12 / 16 / 24 / 32 / 40 / 48 / 128
 */
 
 :root {
+  --ff-body: 'Outfit', sans-serif;
+  --ff-headings: 'Young Serif', 'serif';
+  --fw-regular: 400;
+  --fw-semibold: 600;
+  --fw-bold: 700;
+  --lh-body: 1.5;
+  --lh-headings: 1;
+
+  --color-rose-50: #fff7fb;
+  --color-rose-800: #7a284e;
+
+  --color-stone-100: #f3e5d7;
+  --color-stone-150: #e3ddd7;
+  --color-stone-600: #5f564d;
+  --color-stone-900: #312e2c;
+
+  --color-brown-800: #854632;
+  --color-white: #fff;
+
+  --br-lg: 2.4rem;
+  --br-md: 1.2rem;
+
+  --spacer: 4rem;
+  --spacer-section: 3.2rem;
+}
+
+body {
+  background-color: var(--color-stone-100);
+  font-family: var(--ff-body);
+  font-size: 1.6rem;
+  font-weight: var(--fw-regular);
+  line-height: var(--lh-body);
+}
+
+.header {
+  margin-bottom: var(--spacer-section);
+}
+
+.recipe {
+  margin: 12.8rem auto;
+  padding: var(--spacer);
+  width: 73.6rem;
+  background-color: var(--color-white);
+  border-radius: var(--br-lg);
+}
+
+.recipe-img {
+  border-radius: var(--br-md);
+  margin-bottom: var(--spacer);
+}
+
+.recipe-title {
+  font-family: var(--ff-headings);
+  font-size: 4rem;
+  line-height: var(--lh-headings);
+  font-weight: var(--fw-regular);
+  margin-bottom: 2.4rem;
+}
+
+.recipe-description {
+}
+
+.section-prep {
+  padding: 2.4rem;
+  background-color: var(--color-rose-50);
+  border-radius: var(--br-md);
+}
+
+.section-prep h2 {
+  font-size: 2rem;
+  font-weight: var(--fw-semibold);
+  margin-bottom: 1.6rem;
+  line-height: 1;
+  color: var(--color-rose-800);
+}
+
+.list {
+  list-style: none;
+}
+
+.item {
+  padding-left: 0.8rem;
+  display: flex;
+  align-items: center;
+}
+
+.item:not(:last-child) {
+  margin-bottom: 0.8rem;
+}
+
+.item-bullet-box {
+  width: 1.6rem;
+  height: 2.4rem;
+  margin-right: 1.6rem;
+  display: flex;
+  align-items: center;
+}
+
+.item-bullet {
+  width: 0.4rem;
+  height: 0.4rem;
+  background-color: var(--color-rose-800);
+  border-radius: 50%;
 }

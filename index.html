@@ -7,10 +7,56 @@
 
     <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png" />
 
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@400..700&family=Young+Serif&display=swap"
+      rel="stylesheet"
+    />
+
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/style.css" />
 
     <title>Frontend Mentor | Recipe page</title>
   </head>
-  <body></body>
+  <body>
+    <main>
+      <article class="recipe">
+        <header class="header">
+          <img src="/assets/images/image-omelette.jpeg" alt="omelette with vegetables" class="recipe-img" />
+          <h1 class="recipe-title">Simple Omelette Recipe</h1>
+          <p class="recipe-description">
+            An easy and quick dish, perfect for any meal. This classic omelette combines beaten eggs cooked to
+            perfection, optionally filled with your choice of cheese, vegetables, or meats.
+          </p>
+        </header>
+        <section class="section-prep">
+          <h2>Preparation Time</h2>
+          <ul class="list list--prep">
+            <li class="item">
+              <div class="item-bullet-box">
+                <div class="item-bullet"></div>
+              </div>
+              <p class="item-text"><strong>Total:</strong> Approximately 10 minutes</p>
+            </li>
+            <li class="item">
+              <div class="item-bullet-box">
+                <div class="item-bullet"></div>
+              </div>
+              <p class="item-text"><strong>Preparation:</strong> 5 minutes</p>
+            </li>
+            <li class="item">
+              <div class="item-bullet-box">
+                <div class="item-bullet"></div>
+              </div>
+              <p class="item-text"><strong>Cooking:</strong> 5 minutes</p>
+            </li>
+          </ul>
+        </section>
+        <section class="section-ingredients"></section>
+        <section class="section-instructions"></section>
+        <section class="section-nutrition"></section>
+      </article>
+    </main>
+  </body>
 </html>
