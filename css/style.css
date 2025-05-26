@@ -96,6 +96,25 @@ body {
   border-radius: var(--br-lg);
 }
 
+@media (max-width: 768px) {
+  .recipe {
+    width: 61.6rem;
+  }
+}
+
+@media (max-width: 375px) {
+  .recipe {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    border-radius: 0;
+  }
+
+  .content {
+    padding: 3.2rem;
+  }
+}
+
 /* GENERAL */
 
 h2 {
@@ -154,12 +173,24 @@ h2 {
   margin-bottom: var(--spacer);
 }
 
+@media (max-width: 375px) {
+  .recipe-img {
+    margin-bottom: 0;
+    border-radius: 0;
+  }
+}
+
 .recipe-title {
   font-family: var(--ff-headings);
   font-size: 4rem;
   line-height: var(--lh-headings);
   font-weight: var(--fw-regular);
   margin-bottom: 2.4rem;
+}
+@media (max-width: 375px) {
+  .recipe-title {
+    font-size: 3.6rem;
+  }
 }
 
 .recipe-description {
@@ -244,3 +275,7 @@ h2 {
   font-weight: var(--fw-bold);
   color: var(--color-brown-800);
 }
+
+/* FIXME */
+/* look into automating ol counter with css counter */
+/* add responsive styles for tablet and mobile */
